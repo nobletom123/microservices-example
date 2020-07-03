@@ -15,7 +15,7 @@ const LandingPage = ({ currentUser, tickets }) => {
       </tr>
     )
   })
-  console.log('Starting up...')
+  console.log('Starting up...!')
 
   return (
     <div>
