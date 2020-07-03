@@ -18,6 +18,6 @@ jobs:
       - run: docker push ttbn/client
       - uses: digitalocean/action-doctl@v2
         with:
-          token: ${{ secrets.DIGITALOCEAN_ACCESS_KEY }}
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       - run: doctl kubernetes cluster kubeconfig save ticketing
       - run: kubectl rollout restart deployment client-depl

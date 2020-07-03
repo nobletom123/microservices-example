@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: tickets 
+        app: tickets
     spec:
       containers:
         - name: tickets
