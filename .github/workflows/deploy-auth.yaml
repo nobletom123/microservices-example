@@ -17,3 +17,9 @@ jobs:
           DOCKER_USERNAME: $({ secrets.DOCKER_USERNAME })
           DOCKER_PASSWORD: $({ secrets.DOCKER_PASSWORD })
       - run: docker push ttbn/auth
+      - uses: digitalocean/action-docl@v2
+        with:
+          token: $({ secrets.DIGITALOCEAN_ACCESS_KEY })
+      - run: doctl kubernetes cluster kubeconfig save ticketing
+      - run: kubectl rollout restart deployment auth-depl
+
