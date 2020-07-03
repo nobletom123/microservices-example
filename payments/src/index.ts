@@ -6,7 +6,7 @@ import { OrderCreatedListener } from './events/listeners/order-created-listener'
 
 const start = async () => {
   // Generate JWT
-  console.log('starting....');
+  console.log('Starting up....')
   if(!process.env.JWT_KEY) {
     throw new Error('JWT_KEY must be defined')
   }
