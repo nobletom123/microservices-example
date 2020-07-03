@@ -6,7 +6,7 @@ import { OrderCancelledListener } from './events/listeners/order-cancelled-liste
 
 const start = async () => {
   // Generate JWT
-  console.log('Starting up....')
+  console.log('Starting up...')
   if(!process.env.JWT_KEY) {
     throw new Error('JWT_KEY must be defined')
   }
