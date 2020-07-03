@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: docker push ttbn/auth
-      - uses: digitalocean/action-docl@v2
+      - uses: digitalocean/action-doctl@v2
         with:
           token: $({ secrets.DIGITALOCEAN_ACCESS_KEY })
       - run: doctl kubernetes cluster kubeconfig save ticketing
